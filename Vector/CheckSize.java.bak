@@ -23,7 +23,7 @@ public class CheckSize
 		}
 		Object obj[] = l.toArray();
 		System.out.println(obj);
-		for(Object o : obj)
+		for(o : obj)
 		{
 			System.out.println(o);
 		}
