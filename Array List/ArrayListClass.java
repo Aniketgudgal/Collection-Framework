@@ -4,8 +4,13 @@ public class ArrayListClass
 	public static void main(String x[])
 	{
 		ArrayList a = new ArrayList();
+		int arr[] = {10,20,30,40,50};
 		System.out.println(a);
-		a.add(10);
+		for(int i = 0; i < arr.length; i++)
+		{
+			a.add(arr[i]);
+		}
 		System.out.println(a);
+		//System.out.println("Default capacity: "+a.capacity());
 	}
 }
