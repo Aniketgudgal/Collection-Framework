@@ -1,0 +1,11 @@
+import java.util.*;
+public class ArrayListClass
+{
+	public static void main(String x[])
+	{
+		ArrayList a = new ArrayList();
+		System.out.println(a);
+		a.add(10);
+		System.out.println(a);
+	}
+}
