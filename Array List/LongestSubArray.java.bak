@@ -1,0 +1,59 @@
+/*
+1. Longest Subarray With Sum ≤ K
+Description:
+Given an integer list nums and integer k, return the maximum length of a contiguous subarray whose sum is ≤ k.
+Example:
+Input: nums=[2,3,1,2,4], k=7
+Output: 3
+Explanation: [3,1,2] has sum 6 ≤ 7.
+*/
+import java.util.*;
+public class LongestSubArray
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in); 
+		// take array list from user
+		System.out.print("Enter the total elements count: ");
+		int size = sc.nextInt(); // use loop for total values insert into a arraylist
+		ArrayList num = new ArrayList();
+		for(int i = 1; i <= size; i++)
+		{
+			int number = sc.nextInt();
+			num.add(number);
+		}
+		// taking the value of k 
+		System.out.print("Enter the value of K: ");
+		int k = sc.nextInt();
+		// using two pointer techniques
+		int maxLen = 0; // store the min length of subarray
+		int sum = 0;
+		int s = 0;
+		int e = 0;
+		while(s < num.size())
+		{
+			sum += (int)num.get(s);
+			if(sum <= k) // checking the sum is <= k if yes then check inner condition of max length
+			{
+				if((s-e+1)> maxLen)
+				{
+					maxLen = s-e+1;
+				}
+			}
+			while(sum > k) // if sum is > k then remove last elements from subarray
+			{
+				sum -= (int)num.get(e);
+				e++; // shift index or increase index by 1
+				if(sum <= k) // checking  sum is <= k if yes then store max length
+				{
+					if(s-e+1> maxLen)
+					{
+						maxLen = s-e+1;
+					}
+				}
+			}
+			s++;
+		}
+		System.out.println(num); // print max subarray with sum is less than equal to k 
+	}
+}
