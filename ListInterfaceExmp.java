@@ -8,10 +8,19 @@ public class ListInterfaceExmp
 		al.add(20);
 		al.add(30);
 		
+		// forward direction accessing elements
 		ListIterator li = al.listIterator();
 		while(li.hasNext())
 		{
 			Object obj = li.next();
+			System.out.println(obj);
+		}
+		System.out.println("Printing list in reverse order");
+		// reverse direction accessing elements
+		ListIterator fow = al.listIterator(al.size());
+		while(fow.hasPrevious())
+		{
+			Object obj = fow.previous();
 			System.out.println(obj);
 		}
 	}
