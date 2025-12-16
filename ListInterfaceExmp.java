@@ -1,0 +1,18 @@
+import java.util.*;
+public class ListInterfaceExmp
+{
+	public static void main(String x[])
+	{
+		Vector al = new Vector();
+		al.add(10);
+		al.add(20);
+		al.add(30);
+		
+		ListIterator li = al.listIterator(al.size());
+		while(li.hasPrevious())
+		{
+			Object obj = li.previous();
+			System.out.println(obj);
+		}
+	}
+}
