@@ -3,15 +3,15 @@ public class ListInterfaceExmp
 {
 	public static void main(String x[])
 	{
-		Vector al = new Vector();
+		LinkedList al = new LinkedList();
 		al.add(10);
 		al.add(20);
 		al.add(30);
 		
-		ListIterator li = al.listIterator(al.size());
-		while(li.hasPrevious())
+		ListIterator li = al.listIterator();
+		while(li.hasNext())
 		{
-			Object obj = li.previous();
+			Object obj = li.next();
 			System.out.println(obj);
 		}
 	}
