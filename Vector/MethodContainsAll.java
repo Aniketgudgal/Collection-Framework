@@ -17,6 +17,7 @@ public class MethodContainsAll
 		a.add("aniket");
 		System.out.println(v);
 		System.out.println(a);
+
 		Vector vl = new Vector();
 		vl.add(10);
 		vl.add(40);
