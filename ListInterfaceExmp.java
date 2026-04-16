@@ -7,6 +7,7 @@ public class ListInterfaceExmp
 		al.add(10);
 		al.add(20);
 		al.add(30);
+
 		
 		// forward direction accessing elements
 		ListIterator li = al.listIterator();
