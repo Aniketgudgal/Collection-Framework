@@ -14,6 +14,7 @@ public class MaxHashSet
 		{
 			int input = sc.nextInt();
 			hs.add(input);
+
 			size --;
 		}
 		// finding max value
