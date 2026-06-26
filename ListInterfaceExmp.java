@@ -15,6 +15,7 @@ public class ListInterfaceExmp
 		{
 			Object obj = li.next();
 			System.out.println(obj);
+
 		}
 		System.out.println("Printing list in reverse order");
 		// reverse direction accessing elements
